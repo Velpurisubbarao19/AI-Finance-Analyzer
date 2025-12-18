@@ -6,7 +6,7 @@ An intelligent personal finance advisor powered by OpenAI GPT-4o that provides c
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-
+Streamlit App: https://ai-finance-analyzer-lswergsvmj9bcrqyt7ajpe.streamlit.app/
 ## 🌟 Features
 
 ### 🤖 Multi-Agent AI System
