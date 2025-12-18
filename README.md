@@ -46,17 +46,19 @@ An intelligent personal finance advisor powered by OpenAI GPT-4o that provides c
 
 2. **Install dependencies**
    ```bash
+   cd code
    pip install -r requirements.txt
    ```
 
 3. **Set up environment variables**
-   Create a `.env` file in the project root:
+   Create a `.env` file in the `code` folder:
    ```
    OPENAI_API_KEY=your_openai_api_key_here
    ```
 
 4. **Run the application**
    ```bash
+   cd code
    streamlit run app.py
    ```
 
@@ -66,12 +68,13 @@ An intelligent personal finance advisor powered by OpenAI GPT-4o that provides c
 ## 📁 Project Structure
 
 ```
-Project 2/
-├── app.py              # Main Streamlit application
-├── requirements.txt    # Python dependencies
-├── .env               # Environment variables (API keys)
-├── README.md          # This file
-└── PROJECT_REPORT.md  # Detailed technical documentation
+AI-Finance-Analyzer/
+├── code/
+│   ├── app.py              # Main Streamlit application
+│   ├── requirements.txt    # Python dependencies
+│   └── .env               # Environment variables (API keys)
+├── README.md              # This file
+└── PROJECT_REPORT.md      # Detailed technical documentation
 ```
 
 ## 🎯 Usage Guide
