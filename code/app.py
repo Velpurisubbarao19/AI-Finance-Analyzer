@@ -83,7 +83,18 @@ class DebtReduction(BaseModel):
     recommendations: Optional[List[DebtRecommendation]] = Field(None, description="Recommendations for debt reduction")
 
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Get API key from Streamlit secrets (for cloud deployment) or .env file (for local)
+def get_openai_api_key():
+    """Get OpenAI API key from Streamlit secrets or environment variable"""
+    try:
+        # Try Streamlit secrets first (for Streamlit Cloud)
+        return st.secrets["OPENAI_API_KEY"]
+    except (KeyError, FileNotFoundError):
+        # Fall back to environment variable (for local development)
+        return os.getenv("OPENAI_API_KEY")
+
+OPENAI_API_KEY = get_openai_api_key()
 
 def get_chat_response(user_message: str, financial_data: Dict[str, Any], analysis_results: Dict[str, Any], chat_history: List[Dict[str, str]]) -> str:
     """Generate a chat response based on the financial analysis context"""

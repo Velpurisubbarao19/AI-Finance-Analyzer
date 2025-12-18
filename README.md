@@ -125,6 +125,25 @@ Date,Category,Amount
 ### Supported Models
 The application uses `gpt-4o` by default. To change the model, modify the `self.model` variable in the `FinanceAdvisorSystem` class.
 
+## ☁️ Streamlit Cloud Deployment
+
+To deploy on Streamlit Cloud:
+
+1. **Fork/Push** the repository to your GitHub account
+2. **Connect** your GitHub repo to [Streamlit Cloud](https://streamlit.io/cloud)
+3. **Set the main file path** to `code/app.py`
+4. **Add secrets** in Streamlit Cloud dashboard:
+   - Go to App Settings → Secrets
+   - Add your OpenAI API key:
+     ```toml
+     OPENAI_API_KEY = "sk-your-api-key-here"
+     ```
+5. **Deploy** and your app will be live!
+
+The app automatically detects whether it's running locally (uses `.env`) or on Streamlit Cloud (uses secrets).
+
+---
+
 ## 🛡️ Privacy & Security
 
 - **Local Processing**: All data is processed locally on your machine
